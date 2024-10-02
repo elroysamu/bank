@@ -1,10 +1,10 @@
-package com.ec.eCommerce;
+package com.samu.bank.india;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ECommerceApplicationTests {
+class BankApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -2,7 +2,6 @@ package com.samu.bank.india.service;
 
 import com.samu.bank.india.models.AccountTransfer;
 import com.samu.bank.india.repository.AccountTransferRepository;
-import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

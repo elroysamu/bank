@@ -7,12 +7,10 @@ import com.samu.bank.india.models.AccountTransfer;
 import com.samu.bank.india.models.AccountTransferDTO;
 import com.samu.bank.india.repository.AccountRepository;
 import com.samu.bank.india.repository.AccountTransferRepository;
-import jakarta.persistence.EntityManager;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import java.util.List;
@@ -91,6 +89,7 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public String accountTransfer(AccountTransferDTO accountTransferDTO) {
         Long transactionId = accountTransferDTO.getTransactionId();
+                                                        //callable                                //TransactionCallback
         Future<String> currentTransferFuture = executor.submit(() -> transactionTemplate.execute(status -> {
             AccountTransfer accountTransfer = new AccountTransfer(
                     accountTransferDTO.getFromAccountNumber(),
